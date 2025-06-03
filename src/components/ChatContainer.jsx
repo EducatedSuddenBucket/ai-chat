@@ -19,8 +19,7 @@ const ChatContainer = ({ messages, isLoading }) => {
         <div className="h-full flex flex-col items-center justify-center text-gray-500">
           <h2 className="text-2xl font-bold mb-2">Welcome to AI Chat</h2>
           <p className="mb-8 text-center max-w-md">
-            Start a conversation with one of the available AI models.
-            Support for code highlighting and markdown is included.
+            Start a chat with one of the available AI models.
           </p>
         </div>
       ) : (
