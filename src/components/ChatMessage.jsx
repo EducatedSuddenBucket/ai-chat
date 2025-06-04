@@ -8,7 +8,6 @@ import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism"
 import remarkGfm from "remark-gfm"
 import { ClipboardCopy, Check } from "lucide-react"
 
-// Create a separate component for the code block to isolate state
 const CodeBlock = ({ language, code }) => {
   const [isCopied, setIsCopied] = useState(false)
   const [isDarkMode, setIsDarkMode] = useState(false)
@@ -92,6 +91,7 @@ const ChatMessage = ({ message }) => {
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
             components={{
+            
               code({ node, inline, className, children, ...props }) {
                 const match = /language-(\w+)/.exec(className || "")
                 const language = match ? match[1] : "text"
@@ -105,7 +105,16 @@ const ChatMessage = ({ message }) => {
                   </code>
                 )
               },
+         
               p: ({ children }) => <p className="break-words overflow-wrap-anywhere">{children}</p>,
+
+             think: ({ node, children }) => (
+               <details open className="border-l-2 border-gray-300 bg-gray-50 p-3 rounded-md mb-4">
+                <div className="text-gray-500">
+                  {children}
+                 </div>
+               </details>
+             ),
             }}
           >
             {message.content}
