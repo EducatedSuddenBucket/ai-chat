@@ -19,7 +19,7 @@ const ModelSelector = ({ selectedModel, onSelectModel }) => {
         
         // Set DeepSeek V3 as default model if no model is currently selected
         if (!selectedModel && response.data.some((model) => model.id === "deepseek-ai/DeepSeek-V3-0324")) {
-          onSelectModel("deepseek-ai/DeepSeek-V3-0324")
+          onSelectModel("meta-ai/Llama-4-Maverick-17B-128E-Instruct")
         }
       } catch (err) {
         setError("Failed to load models")
