@@ -18,7 +18,7 @@ const ModelSelector = ({ selectedModel, onSelectModel }) => {
         setModels(response.data)
         
         // Set DeepSeek V3 as default model if no model is currently selected
-        if (!selectedModel && response.data.some((model) => model.id === "deepseek-ai/DeepSeek-V3-0324")) {
+        if (!selectedModel && response.data.some((model) => model.id === "meta-ai/Llama-4-Maverick-17B-128E-Instruct")) {
           onSelectModel("meta-ai/Llama-4-Maverick-17B-128E-Instruct")
         }
       } catch (err) {
