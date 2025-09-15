@@ -18,7 +18,7 @@ function App() {
   const [currentChatId, setCurrentChatId] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
   const [currentMessages, setCurrentMessages] = useState([])
-  const [selectedModel, setSelectedModel] = useState("deepseek-ai/DeepSeek-V3-0324")
+  const [selectedModel, setSelectedModel] = useState("meta-ai/Llama-4-Maverick-17B-128E-Instruct")
   const [isMobileOpen, setIsMobileOpen] = useState(false)
 
   useEffect(() => {
